@@ -3,8 +3,11 @@ library roobo_logger;
 import 'package:logger/logger.dart' as Log;
 import 'package:logger/logger.dart';
 
+import 'log_console.dart';
+
 class Logger {
   static var logger = Log.Logger(
+    output: ExampleLogOutput(),
     printer: PrettyPrinter(
         methodCount: 2,
         // number of method calls to be displayed
@@ -22,5 +25,13 @@ class Logger {
 
   static void i(Object o) {
     logger.i(o.toString());
+  }
+}
+
+class ExampleLogOutput extends ConsoleOutput {
+  @override
+  void output(OutputEvent event) {
+    super.output(event);
+    LogConsole.add(event);
   }
 }
