@@ -13,7 +13,6 @@ class AnsiParser {
 
   void parse(String s) {
     spans = [];
-    spans!.add(createSpan(DateTime.now().toString()+"\n"));
     var state = TEXT;
     StringBuffer? buffer;
     var text = StringBuffer();

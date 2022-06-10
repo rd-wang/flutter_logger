@@ -1,4 +1,8 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - Add release date.
+
 ## [2.0.0] - null-safe.
 
-* TODO: Describe initial release.
+## [2.1.0] - add shake output
+
+## [2.2.0] - add shake output time
+
