@@ -8,3 +8,5 @@
 
 ## [3.0.0] - add file writer
 
+## [3.0.1] - isWriteFile 修复不生效的问题
+

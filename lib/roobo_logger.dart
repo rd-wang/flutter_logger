@@ -68,6 +68,7 @@ class ExampleLogOutput extends ConsoleOutput {
   WriteLogOutput writeLogOutput = WriteLogOutput();
 
   ExampleLogOutput(this.size, this.writeFile, this.savePath) {
+    if (!writeFile) return;
     writeLogOutput.savePath = savePath;
     writeLogOutput.addListener(() {
       if (writeLogOutput._outputEventBuffer.length > 0 && !writeLogOutput.isWriting) writeLogOutput.write2File();
@@ -78,7 +79,9 @@ class ExampleLogOutput extends ConsoleOutput {
   void output(OutputEvent event) {
     super.output(event);
     LogConsole.add(event, bufferSize: size);
-    writeLogOutput.add(event);
+    if (writeFile) {
+      writeLogOutput.add(event);
+    }
   }
 }
 
