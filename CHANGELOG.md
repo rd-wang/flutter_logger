@@ -6,3 +6,5 @@
 
 ## [2.2.0] - add shake output time
 
+## [3.0.0] - add file writer
+
